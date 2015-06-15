@@ -1,0 +1,28 @@
+#!/usr/bin/env ruby
+
+# example command: audio_trimmer 'test.wav' -s=0 -f=30 -o='test_output.wav'
+
+require 'audio_trimmer'
+
+unless ARGV[0].nil?
+	input_file = File.expand_path(ARGV[0])
+else
+	raise "specify input file, e.g. 'audio_trimmer [input_file] -s [start trim] -f [finish trim]'"
+end
+
+trimmer = nil
+if File.exists?(input_file)
+	trimmer = AudioTrimmer.new input:ARGV[0]
+else
+	raise "bad input file, put correct input file as first arg e.g. 'audio_trimmer [input_file] -s [start trim] -f [finish trim]'"
+end
+
+args = Hash[ ARGV.join(' ').scan(/--?([^=\s]+)(?:=(\S+))?/) ]
+
+unless args.key?('o')
+	trimmer.trim start:args['s'], finish:args['f']
+else
+	trimmer.trim start:args['s'], finish:args['f'], output:args['o']
+end
+
+puts "trim success"
