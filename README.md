@@ -1,3 +1,5 @@
+[![Gem Version](https://badge.fury.io/rb/audio-trimmer.svg)](http://badge.fury.io/rb/audio-trimmer)
+
 # audio-trimmer-ruby
 Audio trimmer for ruby powered by sox. Get the gem at [audio-trimmer] (https://rubygems.org/gems/audio-trimmer).
 
