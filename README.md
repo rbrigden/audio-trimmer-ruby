@@ -30,7 +30,7 @@ Next, get the gem
  $ gem install audio-trimmer
  ```
  
-## Usage ##
+## General Usage ##
  
  Simple example:
  ```ruby
@@ -52,5 +52,15 @@ trimmer = AudioTrimmer.new '/path/to/input_file'
 trimmer.trim start:35, output:'/path/to/output_file
 
 ```
+
+## Command Line Usage ##
+
+You can also use audio-trimmer from your shell.
+
+```bash
+$ audio_trimmer [input file] -s=[start trim] -f=[finish trim] -o=[output file]
+```
+
+
 
 Enjoy!
