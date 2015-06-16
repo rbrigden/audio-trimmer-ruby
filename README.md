@@ -42,7 +42,7 @@ Next, get the gem
  trimmer.trim start:0, finish:35, output:'/path/to/output_file'
  
 ```
-You can also just trim from a position to the end of the file. Just omit the finish field. e.g.
+Trim from a position to the end of the file. Just omit the finish field. e.g.
 ```ruby
 require 'audio_trimmer'
 
