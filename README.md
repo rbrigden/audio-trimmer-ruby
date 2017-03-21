@@ -48,7 +48,7 @@ Trim from a position to the end of the file. Just omit the finish field. e.g.
 ```ruby
 require 'audio_trimmer'
 
-trimmer = AudioTrimmer.new '/path/to/input_file'
+trimmer = AudioTrimmer.new input: '/path/to/input_file'
 
 # trim from 35 second mark to end of file
 trimmer.trim start:35, output:'/path/to/output_file
